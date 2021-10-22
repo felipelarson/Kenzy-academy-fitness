@@ -31,7 +31,7 @@ export const GroupsProvider = ({ children }) => {
             .catch((_) => toast.error("failed creation!"))
     }
 
-    const deleteGroup = (id, access) => {
+    const deleteGroup = (id) => {
         axios.delete(`https://kenzie-habits.herokuapp.com/groups/${id}/unsubscribe/`,
             {
                 headers: {

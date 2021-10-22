@@ -24,7 +24,6 @@ export const GroupsComponent = () => {
   const [category, setCategory] = useState("");
 
   const {
-    access,
     subscriptions,
     groupsOfCategory,
     getSubscription,
@@ -38,7 +37,7 @@ export const GroupsComponent = () => {
     getSubscription();
     return () => getSubscription();
     // eslint-disable-next-line
-  }, []);
+  }, [subscriptions]);
 
   const loadGroupsForCategory = () => {
     getGroupsForCategory(`?category=${category}&page=${numberPage}`);
@@ -50,7 +49,7 @@ export const GroupsComponent = () => {
       getGroupsForCategory([]);
     };
     // eslint-disable-next-line
-  }, []);
+  }, [category]);
 
   const onCreateCategory = (data) => {
     createGroup(data);
@@ -130,7 +129,7 @@ export const GroupsComponent = () => {
                     <ButtonX
                       onClick={(e) => {
                         e.stopPropagation();
-                        deleteGroup(group.id, access);
+                        deleteGroup(group.id);
                       }}
                     >
                       <FiX />
