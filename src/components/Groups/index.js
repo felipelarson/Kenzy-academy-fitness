@@ -37,6 +37,13 @@ export const GroupsComponent = () => {
     getSubscription();
     return () => getSubscription();
     // eslint-disable-next-line
+  }, []);
+
+
+  useEffect(() => {
+    getSubscription();
+    return () => getSubscription();
+    // eslint-disable-next-line
   }, [subscriptions]);
 
   const loadGroupsForCategory = () => {
