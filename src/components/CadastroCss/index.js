@@ -46,6 +46,8 @@ export const CadastroCss = styled.div`
                 width: 35vw;
                 margin: 0 2vw;
 
+                > div > h5 { margin: 0}
+
                 .Mvp{
                     display: flex;
                     flex-direction: column;
