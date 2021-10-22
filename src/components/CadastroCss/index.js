@@ -63,6 +63,23 @@ export const CadastroCss = styled.div`
                     display: flex;
                     flex-direction: column;
                 }
+
+                .genero{
+                    color: white;
+                    display: flex;
+                    > div {
+                        display: flex;
+                        align-items: center;
+
+                        > input {
+                            margin-right: 12px;
+                        }
+    
+                        > label {
+                            margin-right: 12px;
+                        }
+                    }
+                }
             }
 
             /* .dados{
@@ -236,10 +253,6 @@ export const CadastroCss = styled.div`
         cursor: pointer;
     }
     
-    .genero{
-        display: flex;
-        align-items: center;
-        color: white;
-    }
+    
 
     `

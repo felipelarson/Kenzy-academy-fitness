@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import { CadastroCss } from "../CadastroCss"
 import logokenzie from "../../assets/img/logokenzie.png"
 import { Button } from "../Button"
+import { Input } from './../Input'
 
 const FormCadastro = () => {
 
@@ -85,35 +86,42 @@ const FormCadastro = () => {
                                     <p>Agora é só preencher rapidinho alguns dados :)</p>
                                 </div>
                                 <div className="Mvp">
-                                    <input placeholder="Username" {...register("username")} />
+                                    <Input width={"100%"} placeholder="Username" {...register("username")} />
                                     {errors.username?.message}
-                                    <input placeholder="E-mail" {...register("email")} />
+                                    <Input width={"100%"} placeholder="E-mail" {...register("email")} />
                                     {errors.email?.message}
-                                    <input placeholder="Password" {...register("password")} />
+                                    <Input width={"100%"} placeholder="Password" {...register("password")} />
                                     {errors.password?.message}
                                 </div>
+                                <Button type="submit" className="Register">Cadastrar</Button>
                             </div>
                             <div className="optional-form">
                                 <h3 className="dados">PREENCHIMENTO NÃO OBRIGATÓRIO</h3>
                                 <div className="nonMvp1">
-                                    <input placeholder="Nome Completo" type="text" />
-                                    <input placeholder="Data de Nascimento" type="date" />
-                                    <input placeholder="Telefone" type="number" />
+                                    <Input width={"100%"} placeholder="Nome Completo" type="text" />
+                                    <Input width={"100%"} placeholder="Data de Nascimento" type="date" />
+                                    <Input width={"100%"} placeholder="Telefone" type="number" />
                                     <div className="genero">
-                                        <input type="radio" name="opcao" value="Masculino" /> Masculino
-                                        <input type="radio" name="opcao" value="Feminino" /> Feminino
+                                        <div>
+                                            <Input width={"20px"} type="radio" name="opcao" value="Masculino" />
+                                            <label>Masculino</label>
+                                        </div>
+                                        <div>
+                                            <Input width={"20px"} type="radio" name="opcao" value="Feminino" />
+                                            <label>Feminino</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="nonMvp2">
-                                    <input placeholder="Cep" type="number" />
-                                    <input placeholder="Endereço" />
-                                    <input placeholder="Bairro" type="text" />
-                                    <input placeholder="Cidade" type="text" />
-                                    <input placeholder="Número" type="number" />
-                                    <input placeholder="Complemento" />
+                                    <Input width={"100%"} placeholder="Cep" type="number" />
+                                    <Input width={"100%"} placeholder="Endereço" />
+                                    <Input width={"100%"} placeholder="Bairro" type="text" />
+                                    <Input width={"100%"} placeholder="Cidade" type="text" />
+                                    <Input width={"100%"} placeholder="Número" type="number" />
+                                    <Input width={"100%"} placeholder="Complemento" />
                                 </div>
                             </div>
-                            <Button type="submit" className="Register">Cadastrar</Button>
+
                         </form>
                         {/* <Button onClick={() => history.push("/login")} className="Login">Login</Button> */}
                     </div>
