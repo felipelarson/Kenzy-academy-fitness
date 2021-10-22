@@ -66,13 +66,13 @@ export const GroupsProvider = ({ children }) => {
             .then(resp => {
                 return setGroupsOfCategory(resp)
             })
-            .catch((_) => toast.error("search failure!"))
+            .catch((_) => console.log)
     }
 
     const getEspecificGroup = (idGroup) => {
         axios.get(`https://kenzie-habits.herokuapp.com/groups/${idGroup}/`)
             .then(resp => setEspecificGroup(resp))
-            .catch((_) => toast.error("search failure!"))
+            .catch((_) => console.log)
     }
 
     const getSubscription = () => {
@@ -86,7 +86,7 @@ export const GroupsProvider = ({ children }) => {
             .then(resp => {
                 return setSubscription(resp)
             })
-            .catch((_) => toast.error("search failure!"))
+            .catch((_) => console.log)
 
     }
 

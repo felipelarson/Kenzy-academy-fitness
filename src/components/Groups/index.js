@@ -39,7 +39,6 @@ export const GroupsComponent = () => {
     // eslint-disable-next-line
   }, []);
 
-
   useEffect(() => {
     getSubscription();
     return () => getSubscription();
@@ -192,7 +191,7 @@ export const GroupsComponent = () => {
             )}
             <span style={{ margin: "1rem" }}>{numberPage}</span>
             {groupsOfCategory.data !== undefined &&
-            numberPage < Math.ceil(groupsOfCategory.data.count / 15) ? (
+              numberPage < Math.ceil(groupsOfCategory.data.count / 15) ? (
               <Button onClick={handleAddPagination}>Next</Button>
             ) : (
               <Button disabled>Previous</Button>
