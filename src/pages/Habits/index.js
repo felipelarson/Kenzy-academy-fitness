@@ -61,7 +61,7 @@ function Habits() {
                 return (
                   <Card
                     key={index}
-                    width={"200px"}
+                    width={"250px"}
                     height={"200px"}
                     position={
                       habitsModal || editHabitsModal ? "static" : "relative"
