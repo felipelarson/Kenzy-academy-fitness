@@ -67,8 +67,8 @@ const FormCadastro = () => {
                             <p>#Training <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Like a Dev</p>
                         </div>
                         <nav onClick={() => history.push("/")} className="signup">Home</nav>
-                        <nav onClick={logout} className="signup">Logout</nav>
-                        <nav onClick={() => history.push("/login")} className="login">Login</nav>
+                        {token && <nav onClick={logout} className="signup">Logout</nav>}
+                        {!token && <nav onClick={() => history.push("/login")} className="login">Login</nav>}
                     </div>
                     <div className="buttons">
                         <Button onClick={() => history.push("quemSomos")}>Quem Somos</Button>
