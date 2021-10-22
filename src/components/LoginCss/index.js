@@ -99,10 +99,11 @@ export const LoginCss = styled.div`
         display: flex;
         justify-content: center;
         flex-direction: column;
-        position: absolute;
+        /* position: absolute;
         top:45%;
-        right:43%;
+        right:43%; */
         align-items: center;
+        height: 100%;
     }
     .form input{
         margin: 10px 0 0 0;
@@ -112,9 +113,9 @@ export const LoginCss = styled.div`
         color: black;
     }
     .h1login{
-        position: absolute;
+        /* position: absolute;
         top:30%;
-        right:45.5%;
+        right:45.5%; */
         color: white;
     }
 
