@@ -58,7 +58,7 @@ const FormCadastro = () => {
             <CadastroCss>
                 <header>
                     <div className="logo">
-                        <img src={logokenzie} alt="logokenzie" />
+                        <img src={logokenzie} alt="logokenzie" className="brand" />
                         <p>Kenzie Academy</p>
                     </div>
 
@@ -71,50 +71,52 @@ const FormCadastro = () => {
                         <nav onClick={() => history.push("/login")} className="login">Login</nav>
                     </div>
                     <div className="buttons">
-                    <Button onClick={() => history.push("quemSomos")}>Quem Somos</Button>
-                    {token && <Button onClick={goTodash}>Dashboard</Button>}
+                        <Button onClick={() => history.push("quemSomos")}>Quem Somos</Button>
+                        {token && <Button onClick={goTodash}>Dashboard</Button>}
                     </div>
                 </header>
                 <div className="container">
-                    <div className="dados">
-                        <h2>MATRÍCULA</h2>
-                        <h5>DADOS PESSOAIS</h5>
-                        <p>Agora é só preencher rapidinho alguns dados :)</p>
-                        <h3 className="preenchimento">PREENCHIMENTO NÃO OBRIGATÓRIO</h3>
-                    </div>
-                    <div className="form">
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <div className="Mvp">
-                                <input placeholder="Username" {...register("username")} />
-                                {errors.username?.message}
-                                <input placeholder="E-mail" {...register("email")} />
-                                {errors.email?.message}
-                                <input placeholder="Password" {...register("password")} />
-                                {errors.password?.message}
-                            </div>
-                            <div className="nonMvp1">
-
-                                <input placeholder="Nome Completo" type="text" />
-                                <input placeholder="Data de Nascimento" type="date" />
-                                <input placeholder="Telefone" type="number" />
-                                <div className="genero">
-                                    <input type="radio" name="opcao" value="Masculino" /> Masculino
-                                    <input type="radio" name="opcao" value="Feminino" /> Feminino
+                    <div className="content">
+                        <form onSubmit={handleSubmit(onSubmit)} className="form">
+                            <div className="mandatory-form">
+                                <div className="dados">
+                                    <h2>MATRÍCULA</h2>
+                                    <h5>DADOS PESSOAIS</h5>
+                                    <p>Agora é só preencher rapidinho alguns dados :)</p>
+                                </div>
+                                <div className="Mvp">
+                                    <input placeholder="Username" {...register("username")} />
+                                    {errors.username?.message}
+                                    <input placeholder="E-mail" {...register("email")} />
+                                    {errors.email?.message}
+                                    <input placeholder="Password" {...register("password")} />
+                                    {errors.password?.message}
                                 </div>
                             </div>
-                            <div className="nonMvp2">
-                                <input placeholder="Cep" type="number" />
-                                <input placeholder="Endereço" />
-                                <input placeholder="Bairro" type="text" />
-                                <input placeholder="Cidade" type="text" />
-                                <input placeholder="Número" type="number" />
-                                <input placeholder="Complemento" />
+                            <div className="optional-form">
+                                <h3 className="dados">PREENCHIMENTO NÃO OBRIGATÓRIO</h3>
+                                <div className="nonMvp1">
+                                    <input placeholder="Nome Completo" type="text" />
+                                    <input placeholder="Data de Nascimento" type="date" />
+                                    <input placeholder="Telefone" type="number" />
+                                    <div className="genero">
+                                        <input type="radio" name="opcao" value="Masculino" /> Masculino
+                                        <input type="radio" name="opcao" value="Feminino" /> Feminino
+                                    </div>
+                                </div>
+                                <div className="nonMvp2">
+                                    <input placeholder="Cep" type="number" />
+                                    <input placeholder="Endereço" />
+                                    <input placeholder="Bairro" type="text" />
+                                    <input placeholder="Cidade" type="text" />
+                                    <input placeholder="Número" type="number" />
+                                    <input placeholder="Complemento" />
+                                </div>
                             </div>
                             <Button type="submit" className="Register">Cadastrar</Button>
                         </form>
+                        {/* <Button onClick={() => history.push("/login")} className="Login">Login</Button> */}
                     </div>
-                    <Button onClick={() => history.push("/login")} className="Login">Login</Button>
-
                 </div>
                 <footer>
                     <div className="infoFooter">
