@@ -43,7 +43,7 @@ export const GroupsComponent = () => {
     getSubscription();
     return () => getSubscription();
     // eslint-disable-next-line
-  }, [subscriptions]);
+  }, []);
 
   const loadGroupsForCategory = () => {
     getGroupsForCategory(`?category=${category}&page=${numberPage}`);
@@ -55,7 +55,7 @@ export const GroupsComponent = () => {
       getGroupsForCategory([]);
     };
     // eslint-disable-next-line
-  }, [category]);
+  }, []);
 
   const onCreateCategory = (data) => {
     createGroup(data);
@@ -177,7 +177,10 @@ export const GroupsComponent = () => {
                   >
                     {groups.name}
                   </TextCard>
-                  <ButtonX onClick={() => subscribToAGroup(groups.id)}>
+                  <ButtonX onClick={() => {
+                    subscribToAGroup(groups.id)
+                    getSubscription()
+                  }}>
                     <FiPlus />
                   </ButtonX>
                 </Card>
