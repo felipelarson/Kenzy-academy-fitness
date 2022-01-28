@@ -11,6 +11,8 @@ export const CadastroCss = styled.div`
     background-color: #007aff;
     width: 100%;
     height: 95vh;
+    padding-bottom:25px;
+    box-sizing:border-box;
 
     .content {
       display: flex;
@@ -43,25 +45,38 @@ export const CadastroCss = styled.div`
       .mandatory-form {
         width: 35vw;
         margin: 0 2vw;
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin-top:30px ;
 
         > div > h5 {
           margin: 0;
         }
 
+        .dados h2, .dados h5 {
+          text-align:center;
+        }
+
+        .dados h2 {
+          padding-top: 30px;
+        }
         .Mvp {
           display: flex;
           flex-direction: column;
+          width: 60%;
         }
       }
 
       .optional-form {
         width: 35vw;
         margin: 0 2vw;
-
         .nonMvp1,
         .nonMvp2 {
           display: flex;
           flex-direction: column;
+
         }
 
         .genero {
@@ -80,74 +95,7 @@ export const CadastroCss = styled.div`
             }
           }
         }
-      }
-
-      /* .dados{
-                position: absolute;
-                top: 155px;
-                left:360px; 
-                flex-direction: column;
-                width: 200px;
-                color: white;
-            } */
-      /* .dados h2{
-                margin: 2px 0;
-                padding: 0px;
-            }
-            .dados h5{
-                margin: 2px 0 2px 0;
-                padding: 0px;
-            }
-            .dados p{
-                margin: 13px 0 0 0;
-                padding: 0px;
-                font-size: 13px;
-            }
-
-            .form{
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                position: relative;
-                top:250px;
-            }
-            .form input{
-                display: flex;
-                justify-content: center;
-                border: 1px solid black;
-            }
-
-            .nonMvp1{
-                position: absolute;
-                right: 650px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .nonMvp1 input{
-                margin: 10px;
-                text-align: start;
-            }
-
-            .nonMvp2{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                position: absolute;
-                right: 350px;
-            }
-            .nonMvp2 input{
-                margin: 10px;
-            }
-            .Mvp{
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                left: 350px;
-            }
-            .Mvp input{
-                margin: 10px;
-            }  */
+      }      
     }
   }
 

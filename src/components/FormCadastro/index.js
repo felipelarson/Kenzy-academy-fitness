@@ -29,7 +29,7 @@ const FormCadastro = () => {
         })
 
     const onSubmit = (data) => {
-
+        
         axios.post("https://kenzie-habits.herokuapp.com/users/", data)
             .then(() => {
                 toast.success("Usuário registrado")
@@ -84,7 +84,6 @@ const FormCadastro = () => {
                                 <div className="dados">
                                     <h2>MATRÍCULA</h2>
                                     <h5>DADOS PESSOAIS</h5>
-                                    <p>Agora é só preencher rapidinho alguns dados :)</p>
                                 </div>
                                 <div className="Mvp">
                                     <Input width={"100%"} placeholder="Username" {...register("username")} />
@@ -114,17 +113,12 @@ const FormCadastro = () => {
                                     </div>
                                 </div>
                                 <div className="nonMvp2">
-                                    <Input width={"100%"} placeholder="Cep" type="number" />
                                     <Input width={"100%"} placeholder="Endereço" />
                                     <Input width={"100%"} placeholder="Bairro" type="text" />
                                     <Input width={"100%"} placeholder="Cidade" type="text" />
-                                    <Input width={"100%"} placeholder="Número" type="number" />
-                                    <Input width={"100%"} placeholder="Complemento" />
                                 </div>
                             </div>
-
                         </form>
-                        {/* <Button onClick={() => history.push("/login")} className="Login">Login</Button> */}
                     </div>
                 </div>
                 <footer>
