@@ -7,6 +7,10 @@ import { Button } from "../Button"
 import logokenzie from "../../assets/img/logokenzie.png"
 import { LoginCss } from "../LoginCss"
 import { Input } from '../Input'
+import { useForm } from "react-hook-form";
+import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup";
+
 
 const FormLogin = () => {
 
@@ -59,7 +63,7 @@ const FormLogin = () => {
     <div>
       <LoginCss>
         <header>
-          <div className="logo">
+          <div className="logo" onClick={()=>history.push("/")}>
             <img src={logokenzie} alt="logokenzie" />
             <p>Kenzie Academy</p>
           </div>
@@ -73,7 +77,7 @@ const FormLogin = () => {
             <nav onClick={() => history.push("/signUp")} className="signup">Sign Up</nav>
           </div>
           <div className="buttons">
-            <Button onClick={() => history.push("quemSomos")}>Quem Somos</Button>
+            <Button onClick={() => history.push("/quemSomos")}>Quem Somos</Button>
             {token && <Button onClick={goTodash}>Dashboard</Button>}
           </div>
         </header>

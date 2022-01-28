@@ -91,7 +91,7 @@ function Habits() {
                 );
               })}
             </HabitsListContainer>
-            <Button onClick={() => setHabitsModal(true)}>Criar Hábito</Button>
+            <Button onClick={() => setHabitsModal(true)} size="25px" height="60px" width="200px">Criar Hábito</Button>
           </Container>
         </ContainerContent>
       </HabitsContent>

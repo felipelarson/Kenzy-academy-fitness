@@ -1,4 +1,4 @@
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -54,11 +54,12 @@ const FormCadastro = () => {
         history.push("/")
         toast.success("Logout feito com sucesso")
     }
+
     return (
         <div>
             <CadastroCss>
                 <header>
-                    <div className="logo">
+                    <div className="logo" onClick={()=>history.push("/")}>
                         <img src={logokenzie} alt="logokenzie" className="brand" />
                         <p>Kenzie Academy</p>
                     </div>
@@ -72,7 +73,7 @@ const FormCadastro = () => {
                         {!token && <nav onClick={() => history.push("/login")} className="login">Login</nav>}
                     </div>
                     <div className="buttons">
-                        <Button onClick={() => history.push("quemSomos")}>Quem Somos</Button>
+                        <Button onClick={() => history.push("/quemSomos")}>Quem Somos</Button>
                         {token && <Button onClick={goTodash}>Dashboard</Button>}
                     </div>
                 </header>
@@ -90,7 +91,7 @@ const FormCadastro = () => {
                                     {errors.username?.message}
                                     <Input width={"100%"} placeholder="E-mail" {...register("email")} />
                                     {errors.email?.message}
-                                    <Input width={"100%"} placeholder="Password" {...register("password")} />
+                                    <Input width={"100%"} type = {"password"} placeholder="Password" {...register("password")} />
                                     {errors.password?.message}
                                 </div>
                                 <Button type="submit" className="Register">Cadastrar</Button>

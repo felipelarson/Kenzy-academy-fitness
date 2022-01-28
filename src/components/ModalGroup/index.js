@@ -205,11 +205,11 @@ const ModalGroup = () => {
 
                                                 <ButtonX onClick={() => {
                                                     setIdActivite(activite.id)
-                                                    return deleteActivity(activite.id)
+                                                    deleteActivity(activite.id)
                                                 }}><FiX /></ButtonX>
                                                 <div onClick={() => {
                                                     setIdActivite(activite.id)
-                                                    return showModalEditActivite()
+                                                    showModalEditActivite()
                                                 }}>
                                                     <TextCard>{activite.title}</TextCard>
                                                     <TextCard>{activite.realization_time}</TextCard>
